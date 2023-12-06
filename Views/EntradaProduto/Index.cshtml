@@ -1,0 +1,48 @@
+﻿@model IEnumerable<ProjetoFinal.Models.EntradaProduto>
+
+@{
+    ViewData["Title"] = "Entrada do produto";
+}
+
+
+<h1>Cadastre uma nova entrada de produto</h1>
+<p>
+    <a asp-action="Create" class="vermelhoclaro">CADASTRAR</a>
+</p>
+<hr />
+<div class="rowtable">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Produto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntradaProdutoData)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EntradaProdutoQuantidade)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Produto.ProdutoNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntradaProdutoData)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EntradaProdutoQuantidade)
+            </td>
+            <td>
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,205 @@
+
+body, html {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+    min-height: 100%;
+    margin-bottom: 60px;
+    background-color: #bf0603;
+    color: white;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+        font-weight: 500;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}
+
+.nav-link{
+    font-weight: bold;
+}
+
+a, th, td {
+    color: white;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.vermelhoclaro:hover {
+    color: #ffff !important;
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+
+.vermelhoclaro {
+    margin-left: 3px;
+}
+a:hover {
+    color: #a6c48a !important;
+}
+.botao {
+    background-color: ;
+    border: none;
+    margin-top: 5%;
+}
+
+input {
+    width: 100%;
+    border: none;
+}
+
+.row {
+    font-size: 16px;
+    margin: 0 auto;
+    margin-top: 4%;
+    width: 40%;
+    background-color: #588157;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+}
+
+.rowtable {
+    margin: 0 auto;
+    font-size: 16px;
+    margin-top: 4%;
+    width: 80%;
+    background-color: #588157;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+}
+
+.rowcaixa {
+    align-items: center;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 27%;
+    background-color: #588157;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 8px;
+    gap: 30px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.336);
+    height: fit-content;
+}
+
+.btn:hover {
+   background-color: #8fb996 !important;
+}
+
+input.btn.btn-primary {
+    background-color: #709775;
+    border: none;
+    margin-top: 7%;
+}
+
+.form-group {
+    margin-top: 5.2%;
+}
+
+.display-4{
+    margin-top: 7%;
+    margin-bottom: 7%;
+}
+
+h3{
+    font-size: 15px;
+}
+
+.linha {
+    background-color: #5EAB5C !important;
+    height: 19px !important;
+    width: 100%;
+}
+
+.caixa {
+    background-color: white !important;
+    height: 100px !important;
+    width: 100%;
+    margin-bottom: 7%;
+}
+.img-logo {
+    width: 90px; 
+    margin: 0 auto;
+}
+
+.img-logo-login {
+    width: 110px;
+    margin: 0 auto;
+    margin-left: 45%;
+}
+.img-home {
+    margin-top: 80px;
+    width: 1030px;
+    border-radius: 10px;
+}
+
+nav {
+    height: 67px;
+}
+
+div.gallery {
+    border: 1px solid #bf0603;
+}
+
+    div.gallery:hover {
+        border: 1px solid #ffff;
+    }
+
+    div.gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+    margin-left: 70px;
+}
+
+@media only screen and (max-width: 700px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nav-link {
+    margin-left: 25px;
+}

@@ -1,0 +1,56 @@
+﻿@model IEnumerable<ProjetoFinal.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produto";
+}
+
+
+<h1>Cadastre um novo produto</h1>
+<p>
+    <a asp-action="Create" class="vermelhoclaro">CADASTRAR</a>
+</p>
+<hr />
+<div class="rowtable">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdutoNome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProdutoQuantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TipoProduto)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fornecedor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdutoNome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProdutoQuantidade)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.TipoProduto.TipodoProduto)
+            </td>
+            <td>
+                    @Html.DisplayFor(modelItem => item.Fornecedor.FornecedorNome)
+            </td>
+               <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ProjetoFinal.Models.TipoSaida>
+
+@{
+    ViewData["Title"] = "Tipo da saida";
+}
+
+
+<h1>Cadastre um novo tipo de saída</h1>
+<p>
+    <a asp-action="Create" class="vermelhoclaro">CADASTRAR</a>
+</p>
+<hr />
+<div class="rowtable">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TipodeSaida)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TipodeSaida)
+            </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>

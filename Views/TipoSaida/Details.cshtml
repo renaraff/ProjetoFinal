@@ -1,0 +1,23 @@
+﻿@model ProjetoFinal.Models.TipoSaida
+
+@{
+    ViewData["Title"] = "Detalhes";
+}
+
+<h1>Detalhes do tipo de saída</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TipodeSaida)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TipodeSaida)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.Id">Editar</a> |
+    <a asp-action="Index">Voltar</a>
+</div>

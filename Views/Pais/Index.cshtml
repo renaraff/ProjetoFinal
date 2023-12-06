@@ -1,0 +1,37 @@
+﻿@model IEnumerable<ProjetoFinal.Models.Pais>
+
+@{
+    ViewData["Title"] = "País";
+}
+
+<h1>Cadastre um novo país</h1>
+<p>
+    <a asp-action="Create" class="vermelhoclaro">CADASTRAR</a>
+</p>
+<hr />
+<div class="rowtable">
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PaisNome)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PaisNome)
+            </td>
+              <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+        </tr>
+}
+    </tbody>
+</table>
+</div>
